@@ -1,0 +1,11 @@
+Cash Book — Google Sheet API สำหรับ GitHub Pages (ไม่ต้องมี HTML ใน Apps Script)
+
+1) สร้าง Sheet → Extensions → Apps Script
+2) วางแค่ Code.gs จากโฟลเดอร์ apps-script นี้
+3) Script properties: CASHBOOK_API_SECRET = รหัสยาวๆ
+4) Deploy > Web app > Execute as: Me > Who has access: Anyone (แนะนำสำหรับ Pages)
+5) Copy URL /exec → ใส่ใน js/config.js (webAppUrl + secret) แล้ว push GitHub Pages
+
+GitHub: Settings > Pages > branch main + root — เปิด https://user.github.io/repo/
+
+โฟลเดอร์ legacy-html/ = UI แบบเก่าใน Apps Script (ไม่ใช้แล้ว)
