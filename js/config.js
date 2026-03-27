@@ -5,5 +5,5 @@
  */
 window.CASHBOOK_CONFIG = {
   webAppUrl: "https://script.google.com/macros/s/AKfycbxfWxUh_pV8njO_hl8m1U5ZraMpav79Vdfw_nKULeX43FSw88dBB76PrX2Ec6ojYhw5/exec",
-  secret: "AKfycbxfWxUh_pV8njO_hl8m1U5ZraMpav79Vdfw_nKULeX43FSw88dBB76PrX2Ec6ojYhw5",
+  secret: "cb-7Kp9mN2xQv4wRt8suntar",
 };
