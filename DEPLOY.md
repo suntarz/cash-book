@@ -72,6 +72,8 @@ window.CASHBOOK_CONFIG = {
 };
 ```
 
+**สำคัญ:** `secret` คือ **ข้อความรหัส** ที่ตั้งใน Script properties — **ห้าม** วาง URL ของ Web App ซ้ำในช่อง `secret` (จะโหลดไม่สำเร็จและได้ข้อความเตือนเรื่อง URL/รหัส)
+
 3. Commit + push — หรือถ้า repo **สาธารณะ** อย่า commit รหัสจริง: ใช้ build แยก / GitHub Actions secrets / เก็บ repo เป็น private
 
 **หมายเหตุ:** การโหลดข้อมูลใช้ **JSONP** (GET พร้อม `secret` ใน URL) — อย่าแชร์ลิงก์ที่มีรหัสในที่สาธารณะหากไม่ต้องการให้คนอื่นดึงข้อมูลได้

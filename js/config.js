@@ -1,9 +1,9 @@
 /**
- * GitHub Pages + Google Sheet (Apps Script API)
- * ใส่ URL Web App (/exec) และรหัสลับให้ตรงกับ Apps Script (Script property CASHBOOK_API_SECRET)
- * ถ้าเว้น webAppUrl ว่าง = ใช้แค่ localStorage ในเครื่อง
+ * webAppUrl = URL จาก Deploy Web App (ลงท้าย /exec) แค่บรรทัดเดียว
+ * secret    = ข้อความลับที่คุณตั้งใน Apps Script → Script properties → CASHBOOK_API_SECRET
+ *             ห้ามใส่ URL ตรงนี้ — ต้องเป็นสตริงรหัสที่ตรงกับใน Apps Script เท่านั้น
  */
 window.CASHBOOK_CONFIG = {
-  webAppUrl: "https://script.google.com/macros/s/AKfycbxGZRyxWD4YF-gNrSc1TZFmyf-ifduE3cFHCMMP6lWIE02uXOy80C0uNThuVpWn9B73/exec",
-  secret: "https://script.google.com/macros/s/AKfycbxGZRyxWD4YF-gNrSc1TZFmyf-ifduE3cFHCMMP6lWIE02uXOy80C0uNThuVpWn9B73/exec",
+  webAppUrl: "https://script.google.com/macros/s/AKfycbxfWxUh_pV8njO_hl8m1U5ZraMpav79Vdfw_nKULeX43FSw88dBB76PrX2Ec6ojYhw5/exec",
+  secret: "",
 };

@@ -33,7 +33,8 @@ function doGet(e) {
       return ContentService.createTextOutput("invalid callback").setMimeType(ContentService.MimeType.TEXT);
     }
     try {
-      if (!p.secret || getApiSecret() !== String(p.secret)) {
+      var reqSecret = p.secret ? String(p.secret).trim() : "";
+      if (!reqSecret || getApiSecret() !== reqSecret) {
         return ContentService.createTextOutput(p.callback + "(null)").setMimeType(ContentService.MimeType.JAVASCRIPT);
       }
       var json = loadStateFromServer();
@@ -54,7 +55,7 @@ function doPost(e) {
       return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "no body" })).setMimeType(ContentService.MimeType.JSON);
     }
     var body = JSON.parse(e.postData.contents);
-    if (body.secret !== getApiSecret()) {
+    if (String(body.secret || "").trim() !== getApiSecret()) {
       return ContentService.createTextOutput(JSON.stringify({ ok: false, error: "unauthorized" })).setMimeType(ContentService.MimeType.JSON);
     }
     saveStateToServer(body.payload);
